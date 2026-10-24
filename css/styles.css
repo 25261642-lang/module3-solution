@@ -1,108 +1,406 @@
 
-/* Основные настройки */
+:root {
+  --dark: #171715;
+  --gold: #c49a5a;
+  --cream: #faf8f4;
+  --text: #33312e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
+  margin: 0;
+  background: var(--cream);
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
 }
 
-/* Навигационная панель */
+h1, h2, h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
 .navbar {
-    background-color: #333;
-    border: none;
-    border-radius: 0;
-    min-height: 70px;
-}
-
-.navbar-brand {
-    font-size: 26px;
-    font-weight: bold;
-    padding-top: 25px;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: var(--dark);
+  min-height: 76px;
 }
 
 .navbar-default .navbar-brand {
-    color: white;
+  height: 76px;
+  padding: 27px 25px;
+  color: #fff;
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.navbar-default .navbar-brand:hover {
-    color: #ffcc00;
+.navbar-brand span,
+.site-footer h2 span {
+  color: var(--gold);
 }
 
-/* Мобильное меню */
-.navbar-default .navbar-toggle {
-    margin-top: 18px;
-    border-color: white;
-}
-
-.navbar-default .navbar-toggle .icon-bar {
-    background-color: white;
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #fff;
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: white;
-    text-align: center;
-    font-size: 18px;
+  color: #eee;
+  padding: 28px 23px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: .25s;
 }
 
-.navbar-default .navbar-nav > li > a:hover {
-    background-color: #555;
-    color: #ffcc00;
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: var(--gold);
+  background: transparent;
 }
 
-/* Заголовок страницы */
-h1 {
-    margin: 35px 0;
-    font-size: 36px;
-    font-weight: bold;
+.navbar-default .navbar-toggle {
+  margin-top: 20px;
+  border-color: var(--gold);
 }
 
-/* Разделы меню */
+.navbar-default .navbar-toggle .icon-bar {
+  background: var(--gold);
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background: #333;
+}
+
+/* Главный экран */
+.hero {
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.84), rgba(0,0,0,.25)),
+    url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=85')
+    center center / cover no-repeat;
+}
+
+.hero-overlay {
+  min-height: 580px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay .container {
+  width: 100%;
+}
+
+.hero-content {
+  max-width: 720px;
+  padding: 70px 15px;
+  color: white;
+}
+
+.eyebrow,
+.dish-category {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: var(--gold);
+}
+
+.hero h1 {
+  font-size: clamp(46px, 6vw, 86px);
+  line-height: 1.12;
+  margin: 25px 0;
+  font-weight: 700;
+}
+
+.hero h1 em {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.hero p {
+  max-width: 560px;
+  font-size: 15px;
+  line-height: 2;
+  color: #ddd;
+}
+
+.hero-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 17px 28px;
+  background: var(--gold);
+  color: #171715;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  transition: .25s;
+}
+
+.hero-btn span {
+  margin-left: 15px;
+  font-size: 17px;
+}
+
+.hero-btn:hover {
+  background: #fff;
+  color: #171715;
+  text-decoration: none;
+}
+
+/* Заголовок меню */
+.section-heading {
+  padding: 85px 15px 55px;
+}
+
+.section-heading h2 {
+  margin: 15px 0;
+  font-size: 54px;
+  font-weight: 700;
+}
+
+.heading-line {
+  width: 55px;
+  height: 3px;
+  margin: 22px auto;
+  background: var(--gold);
+}
+
+.section-heading p {
+  color: #777;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Карточки блюд */
 .menu-section {
-    background-color: #e0e0e0;
-    padding: 25px;
-    margin: 20px 15px;
-    border-radius: 8px;
+  max-width: 1250px;
+  margin: 0 auto 40px;
+  background: white;
+  box-shadow: 0 12px 45px rgba(0,0,0,.055);
+  overflow: hidden;
 }
 
-.menu-section h2 {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 25px;
+.menu-section .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
 }
 
-.menu-section p {
-    font-size: 17px;
-    line-height: 1.8;
-    margin-bottom: 20px;
+.menu-section .row > div {
+  float: none;
+}
+
+.dish-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 460px;
+  background-size: cover;
+  background-position: center;
+}
+
+.chicken-image {
+  background-image: url('https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=1100&q=85');
+}
+
+.beef-image {
+  background-image: url('https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1100&q=85');
+}
+
+.sushi-image {
+  background-image: url('https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=1100&q=85');
+}
+
+.image-label {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  padding: 12px 17px;
+  background: rgba(20,20,20,.85);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.dish-content {
+  padding: 55px 48px;
+}
+
+.dish-content h3 {
+  margin: 17px 0 22px;
+  font-size: 43px;
+  line-height: 1.25;
+}
+
+.dish-content h3 span {
+  display: block;
+  margin-top: 5px;
+  color: #9b8a76;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.dish-intro {
+  font-weight: 700;
+  color: #4a4036;
+}
+
+.dish-content p {
+  font-size: 13px;
+  line-height: 2;
+  color: #666;
+  margin-bottom: 18px;
+}
+
+.dish-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 25px;
+  border-top: 1px solid #eee;
+  padding-top: 22px;
+  margin-top: 25px;
+}
+
+.dish-footer span {
+  font-size: 11px;
+  font-weight: 700;
+  color: #9d7b48;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 25px;
+  color: #9d7b48;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.back-link:hover {
+  color: #333;
+}
+
+/* Подвал */
+.site-footer {
+  margin-top: 45px;
+  padding: 65px 20px 40px;
+  background: var(--dark);
+  color: #fff;
+}
+
+.site-footer h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.site-footer p {
+  margin-top: 15px;
+  color: #aaa;
+  font-size: 13px;
+}
+
+.footer-line {
+  height: 1px;
+  max-width: 500px;
+  margin: 30px auto;
+  background: #444;
+}
+
+.site-footer small {
+  color: #777;
 }
 
 /* Планшеты */
 @media (min-width: 768px) and (max-width: 991px) {
-    h1 {
-        font-size: 32px;
-    }
+  .hero-overlay {
+    min-height: 470px;
+  }
 
-    .menu-section {
-        padding: 20px;
-    }
+  .dish-image {
+    min-height: 380px;
+  }
+
+  .dish-content {
+    padding: 35px;
+  }
 }
 
 /* Смартфоны */
 @media (max-width: 767px) {
-    h1 {
-        font-size: 28px;
-    }
+  .navbar-default .navbar-brand {
+    font-size: 19px;
+    padding-left: 15px;
+  }
 
-    .menu-section {
-        margin: 15px 5px;
-        padding: 15px;
-    }
+  .navbar-default .navbar-nav > li > a {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+  }
 
-    .menu-section h2 {
-        font-size: 24px;
-    }
+  .hero-overlay {
+    min-height: 440px;
+  }
 
-    .menu-section p {
-        font-size: 16px;
-    }
+  .hero-content {
+    padding: 60px 10px;
+  }
+
+  .hero h1 {
+    font-size: 46px;
+  }
+
+  .hero p {
+    font-size: 13px;
+  }
+
+  .section-heading {
+    padding: 55px 10px 30px;
+  }
+
+  .section-heading h2 {
+    font-size: 40px;
+  }
+
+  .menu-section {
+    margin-bottom: 25px;
+  }
+
+  .menu-section .row {
+    display: block;
+  }
+
+  .menu-section .row > div {
+    float: none;
+  }
+
+  .dish-image {
+    min-height: 290px;
+  }
+
+  .dish-content {
+    padding: 30px 23px;
+  }
+
+  .dish-content h3 {
+    font-size: 35px;
+  }
+
+  .dish-content p {
+    font-size: 13px;
+  }
 }
