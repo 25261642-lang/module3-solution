@@ -1,0 +1,108 @@
+
+/* Основные настройки */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Навигационная панель */
+.navbar {
+    background-color: #333;
+    border: none;
+    border-radius: 0;
+    min-height: 70px;
+}
+
+.navbar-brand {
+    font-size: 26px;
+    font-weight: bold;
+    padding-top: 25px;
+}
+
+.navbar-default .navbar-brand {
+    color: white;
+}
+
+.navbar-default .navbar-brand:hover {
+    color: #ffcc00;
+}
+
+/* Мобильное меню */
+.navbar-default .navbar-toggle {
+    margin-top: 18px;
+    border-color: white;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    background-color: #555;
+    color: #ffcc00;
+}
+
+/* Заголовок страницы */
+h1 {
+    margin: 35px 0;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* Разделы меню */
+.menu-section {
+    background-color: #e0e0e0;
+    padding: 25px;
+    margin: 20px 15px;
+    border-radius: 8px;
+}
+
+.menu-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.menu-section p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Планшеты */
+@media (min-width: 768px) and (max-width: 991px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    .menu-section {
+        padding: 20px;
+    }
+}
+
+/* Смартфоны */
+@media (max-width: 767px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .menu-section {
+        margin: 15px 5px;
+        padding: 15px;
+    }
+
+    .menu-section h2 {
+        font-size: 24px;
+    }
+
+    .menu-section p {
+        font-size: 16px;
+    }
+}
