@@ -4,121 +4,170 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Food, LLC — Меню ресторана</title>
+  <title>Food, LLC — Ресторан вкусных открытий</title>
+  <meta name="description" content="Food, LLC — блюда из курицы, говядины и японская кухня.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
 
-<header>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
+<body id="top">
 
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed"
-                data-toggle="collapse"
-                data-target="#mobile-menu"
-                aria-expanded="false"
-                aria-controls="mobile-menu">
-          <span class="sr-only">Открыть меню</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+  <header>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed"
+                  data-toggle="collapse"
+                  data-target="#mobile-menu"
+                  aria-expanded="false"
+                  aria-controls="mobile-menu">
+            <span class="sr-only">Открыть меню</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#top">FOOD<span>, LLC</span></a>
+        </div>
 
-        <a class="navbar-brand" href="index.html">Food, LLC</a>
+        <div class="collapse navbar-collapse" id="mobile-menu">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#chicken">Chicken</a></li>
+            <li><a href="#beef">Beef</a></li>
+            <li><a href="#sushi">Sushi</a></li>
+          </ul>
+        </div>
       </div>
+    </nav>
+  </header>
 
-      <div class="collapse navbar-collapse" id="mobile-menu">
-        <ul class="nav navbar-nav visible-xs">
-          <li><a href="#chicken">Chicken — Курица</a></li>
-          <li><a href="#beef">Beef — Говядина</a></li>
-          <li><a href="#sushi">Sushi — Суши</a></li>
-        </ul>
+  <section class="hero">
+    <div class="hero-overlay">
+      <div class="container">
+        <div class="hero-content">
+          <span class="eyebrow">ДОБРО ПОЖАЛОВАТЬ В FOOD, LLC</span>
+          <h1>Искусство<br><em>вкусной еды</em></h1>
+          <p>Откройте для себя мир изысканных вкусов, свежих ингредиентов и незабываемых гастрономических впечатлений.</p>
+          <a href="#menu" class="hero-btn">ПОСМОТРЕТЬ МЕНЮ <span>↗</span></a>
+        </div>
       </div>
-
     </div>
-  </nav>
-</header>
+  </section>
 
-<main class="container-fluid">
+  <main id="menu" class="container-fluid">
+    <div class="section-heading text-center">
+      <span class="eyebrow">СОЗДАНО С ЛЮБОВЬЮ</span>
+      <h2>Our Menu</h2>
+      <div class="heading-line"></div>
+      <p>Три направления вкуса. Одно незабываемое впечатление.</p>
+    </div>
 
-  <h1 class="text-center">Our Menu</h1>
-  <p class="text-center">
-    Добро пожаловать в наш ресторан!
-    Ознакомьтесь с нашими блюдами.
-  </p>
+    <div class="row">
+      <section id="chicken" class="col-xs-12">
+        <article class="menu-section">
+          <div class="row">
+            <div class="col-md-5 col-sm-12">
+              <div class="dish-image chicken-image">
+                <span class="image-label">01 / CHICKEN</span>
+              </div>
+            </div>
+            <div class="col-md-7 col-sm-12">
+              <div class="dish-content">
+                <span class="dish-category">ФИРМЕННЫЕ БЛЮДА</span>
+                <h3>Chicken <span>— Курица</span></h3>
+                <p class="dish-intro">Нежное мясо, ароматные специи и безупречный вкус в каждом кусочке.</p>
+                <p>В нашем ресторане представлены разнообразные блюда из курицы, приготовленные из свежих и качественных продуктов. Мы предлагаем ароматную курицу на гриле, хрустящую жареную курицу и традиционные блюда по домашним рецептам.</p>
+                <p>Наши повара используют натуральные специи и тщательно подбирают ингредиенты. Каждое блюдо готовится непосредственно перед подачей, чтобы сохранить свежесть и насыщенный вкус.</p>
+                <p>Курица подаётся с различными гарнирами: рисом, картофелем, свежими овощами и фирменными соусами. Особое внимание мы уделяем качеству приготовления и красивой подаче.</p>
+                <p>Мы постоянно совершенствуем рецепты и расширяем ассортимент. Независимо от ваших предпочтений, в нашем меню найдётся подходящее блюдо из курицы.</p>
+                <div class="dish-footer">
+                  <span>✦ Свежие продукты</span>
+                  <span>✦ Авторские рецепты</span>
+                </div>
+                <a href="#top" class="back-link">↑ Наверх</a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
 
-  <div class="row">
+      <section id="beef" class="col-xs-12">
+        <article class="menu-section">
+          <div class="row">
+            <div class="col-md-5 col-md-push-7 col-sm-12">
+              <div class="dish-image beef-image">
+                <span class="image-label">02 / BEEF</span>
+              </div>
+            </div>
+            <div class="col-md-7 col-md-pull-5 col-sm-12">
+              <div class="dish-content">
+                <span class="dish-category">МЯСНЫЕ ДЕЛИКАТЕСЫ</span>
+                <h3>Beef <span>— Говядина</span></h3>
+                <p class="dish-intro">Сочные стейки и насыщенный вкус для настоящих ценителей мяса.</p>
+                <p>Блюда из говядины занимают особое место в меню нашего ресторана. Мы используем качественное мясо и проверенные технологии приготовления.</p>
+                <p>Наши повара предлагают сочные стейки, тушёную говядину и другие мясные блюда. Каждое блюдо отличается насыщенным вкусом и приятным ароматом.</p>
+                <p>Говядина прекрасно сочетается с овощами, картофелем и разнообразными соусами. Мы стремимся обеспечить высокое качество обслуживания и вкусную еду для каждого гостя.</p>
+                <div class="dish-footer">
+                  <span>✦ Отборное мясо</span>
+                  <span>✦ Идеальная прожарка</span>
+                </div>
+                <a href="#top" class="back-link">↑ Наверх</a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
 
-    <section class="col-xs-12" id="chicken">
-      <div class="menu-section">
-        <h2 class="text-center">Chicken — Курица</h2>
+      <section id="sushi" class="col-xs-12">
+        <article class="menu-section">
+          <div class="row">
+            <div class="col-md-5 col-sm-12">
+              <div class="dish-image sushi-image">
+                <span class="image-label">03 / SUSHI</span>
+              </div>
+            </div>
+            <div class="col-md-7 col-sm-12">
+              <div class="dish-content">
+                <span class="dish-category">ЯПОНСКАЯ КУХНЯ</span>
+                <h3>Sushi <span>— Суши</span></h3>
+                <p class="dish-intro">Гармония японских традиций, свежести и мастерства наших поваров.</p>
+                <p>Для любителей японской кухни мы подготовили разнообразный выбор суши и роллов. Наши повара используют свежие ингредиенты и традиционные методы приготовления.</p>
+                <p>В меню представлены классические роллы, суши с рыбой и оригинальные сочетания продуктов. Мы уделяем большое внимание свежести ингредиентов и качеству каждого заказа.</p>
+                <p>Суши подаются с соевым соусом, имбирём и васаби. Попробуйте наши блюда японской кухни и насладитесь их неповторимым вкусом.</p>
+                <div class="dish-footer">
+                  <span>✦ Японские традиции</span>
+                  <span>✦ Свежие ингредиенты</span>
+                </div>
+                <a href="#top" class="back-link">↑ Наверх</a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
 
-        <p>В нашем ресторане представлены разнообразные блюда из курицы, приготовленные из свежих и качественных продуктов.</p>
+  <footer class="site-footer text-center">
+    <h2>FOOD<span>, LLC</span></h2>
+    <p>Хорошая еда. Прекрасные моменты.</p>
+    <div class="footer-line"></div>
+    <small>© 2026 Food, LLC. Учебный проект на Bootstrap 3.</small>
+  </footer>
 
-        <p>Мы предлагаем ароматную курицу на гриле, хрустящую жареную курицу и традиционные блюда по домашним рецептам.</p>
-
-        <p>Наши повара используют натуральные специи и тщательно подбирают ингредиенты для каждого блюда.</p>
-
-        <p>Курица подаётся с различными гарнирами: рисом, картофелем, свежими овощами и фирменными соусами.</p>
-
-        <p>Особое внимание мы уделяем качеству приготовления и красивой подаче блюд.</p>
-
-        <p>Каждое блюдо готовится непосредственно перед подачей, чтобы сохранить свежесть и насыщенный вкус.</p>
-
-        <p>Наш ресторан стремится создать комфортную атмосферу для каждого посетителя.</p>
-
-        <p>Мы постоянно совершенствуем рецепты и расширяем ассортимент блюд.</p>
-
-        <p>Независимо от ваших предпочтений, в нашем меню найдётся подходящее блюдо из курицы.</p>
-
-        <p>Благодарим вас за выбор нашего ресторана и надеемся увидеть вас снова!</p>
-      </div>
-    </section>
-
-    <section class="col-xs-12" id="beef">
-      <div class="menu-section">
-        <h2 class="text-center">Beef — Говядина</h2>
-
-        <p>Блюда из говядины занимают особое место в меню нашего ресторана.</p>
-
-        <p>Мы используем качественное мясо и проверенные технологии приготовления.</p>
-
-        <p>Наши повара предлагают сочные стейки, тушёную говядину и другие мясные блюда.</p>
-
-        <p>Каждое блюдо отличается насыщенным вкусом и приятным ароматом.</p>
-
-        <p>Говядина прекрасно сочетается с овощами, картофелем и разнообразными соусами.</p>
-
-        <p>Мы стремимся обеспечить высокое качество обслуживания и вкусную еду для каждого гостя.</p>
-      </div>
-    </section>
-
-    <section class="col-xs-12" id="sushi">
-      <div class="menu-section">
-        <h2 class="text-center">Sushi — Суши</h2>
-
-        <p>Для любителей японской кухни мы подготовили разнообразный выбор суши и роллов.</p>
-
-        <p>Наши повара используют свежие ингредиенты и традиционные методы приготовления.</p>
-
-        <p>В меню представлены классические роллы, суши с рыбой и оригинальные сочетания продуктов.</p>
-
-        <p>Мы уделяем большое внимание свежести ингредиентов и качеству каждого заказа.</p>
-
-        <p>Суши подаются с соевым соусом, имбирём и васаби.</p>
-
-        <p>Попробуйте наши блюда японской кухни и насладитесь их неповторимым вкусом.</p>
-      </div>
-    </section>
-
-  </div>
-</main>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script>
+    $(function () {
+      $('#mobile-menu a').on('click', function () {
+        if ($('.navbar-toggle').is(':visible')) {
+          $('#mobile-menu').collapse('hide');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
